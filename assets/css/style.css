@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* basic template styling*/
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    /* overflow:hidden; */
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+}
+/* Nav Bar Styling*/
+.navbar{
+    position:fixed;
+    left:-35.781rem;
+    z-index: 9;
+    transition:0.3s all ease;
+}
+.show-nav{
+    position:fixed;
+    left:-35.781rem;
+    z-index: 9;
+}
+.show-all{
+    float:right;
+    cursor: pointer;
+}
+
+.circle{
+    height: 46.938rem;
+    width:46.938rem;
+    background-color: #ffeded;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition:0.3s all ease;
+}
+.circle-fs{
+    height: 60rem;
+    width:60rem;
+    background-color: #ffeded;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* top:-2%; */
+    transition:0.3s all ease;
+}
+.circle .icons-list{
+    margin-left:36rem;
+    list-style-type: none;
+}
+.icons-list img{
+    height:2.3rem;
+}
+.icon-desc{
+    display:none;
+}
+.icons-list-fs{
+    margin-left:9rem;
+    list-style-type: none;
+}
+
+/* Homepage styling */
+/* #particles-js{
+    position:absolute;
+    opacity:50%;
+    z-index: -1;
+} */
+
+.superParent{
+    /* background:url('./images/background.gif');
+    background-repeat: repeat;
+    background-size: cover; */
+    height:auto;
+    /* display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+#Home-Page{
+    height:auto;
+    padding-bottom:2rem ;
+}
+/* ssit logo positioning */
+.ssit-logo{
+    margin-right:3.4rem;
+    padding-top:2rem;
+}
+.ssit-logo img{
+    float:right;
+    height:auto;
+    width:10.5rem;
+}
+.h4c-logo{
+    margin-left:4.4rem;
+    /* padding-top:2rem; */
+    display:none;
+}
+.h4c-logo img{
+    float:left;
+    height:auto;
+    width:5.5rem;
+}
+
+
+
+/* heading styling and positioning */
+.heading{
+    margin-left:15.7rem;
+    margin-top:1.4rem;
+    /* display:flex;
+    flex-direction: column;
+    align-items:center; */
+}
+.before-title{
+    margin-top:7rem;
+    width: fit-content;    
+    color:white;
+    font-family: 'Poppins',sans-serif;
+    font-size:2rem;
+}
+.h4ctitle{
+    height:7rem;
+}
+
+
+
+/* buttons, countdown and logo */
+.tlink a{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+    z-index: 9;
+}
+.tlink a:hover{
+    color:white;
+}
+.tlink img{
+    /* display:flex; */
+    /* align-items: center; */
+    height:25px;
+}
+
+/* making a flexbox for arranging countdown and 
+   links one side , and logo on the other. */
+.flexbox1{
+    display:flex;
+    /* align-items: center; */
+    justify-content:center;
+}
+.title{
+    display:flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.links{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+.links li{
+    text-align: center;
+    width:fit-content;
+    margin:1rem;
+    border:2px solid #EB1616;
+    border-radius:5rem;
+    padding:0.5rem;
+}
+.links li a{
+    padding:0.5rem;
+    color:white;
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+}
+.links li:hover{
+    color:#ffeded;
+    background-color:#EB1616;
+}
+.h4cdesk{
+    height:25rem;
+    width:auto;
+    transform: rotate(-23.03deg);
+    /* margin-left:10rem; */
+}
+/*removing the mobile div of h4c logo */
+.h4cmob{
+    display:none;
+}
+/* removing mobile div of timer */
+.timer-mob{
+    display:none;
+}
+/* styling and positioning of timer in desktop */
+.timer-desk{
+    margin-left:2rem;
+    margin-bottom:4rem;
+    margin-top:2rem;
+    font-size:2rem;
+    color:#ffeded;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins',sans-serif;
+}
+.timer-desk th{
+    text-align: left;
+    padding-right:1.5rem;   
+}
+.timer-desk td{
+    padding-right:1.5rem;
+}
+/* styling navbar icons */
+.home{
+    height:35px;
+    width:auto;
+    margin:1rem;
+    padding:0;
+}
+/* atyling about us section */
+#about-us{
+    height:100vh;
+    background-color:#212121;
+}
+

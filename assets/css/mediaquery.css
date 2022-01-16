@@ -1,0 +1,128 @@
+/* to make the ssit logo and before-title in different lines */
+nav{
+    display:none;
+}
+
+.homeParent{
+    padding:0;
+    margin:0;
+    height:auto;
+}
+/* positioning of ssit logo */
+.ssit-logo{
+    padding:0;
+    margin:0;
+    margin-top:2rem;
+    margin-left:1rem;
+}
+.ssit-logo img{
+    float:none;
+    height:3rem;
+    width:auto;
+}
+.h4c-logo{
+    display:none;
+}
+/* positioning and styling of title and before title */
+.heading{
+    padding:0;
+    margin:0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.before-title{
+    position: relative;
+    margin:0;
+    margin-top:1rem;
+    margin-bottom:0.5rem;
+    padding:0;
+    font-size:16px;
+    display:flex;
+    justify-content: center;
+    /* display:none; */
+}
+.h4ctitle{
+    width:18rem;
+    height:auto;
+    /* display: none; */
+}
+/* displaying mobile h4c logo and hiding desktop logo */
+.title{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.h4cmob{
+    display: block;
+    margin:0;
+    height:10rem;
+    margin-bottom:0.5rem;
+}
+.h4cdesk{
+    display:none;
+}
+/* styling buttons */
+.flexbox1{
+    margin:0;
+    display:flex;
+    justify-content: justify;
+    
+}
+.links{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:1rem;
+}
+.links li{
+    border:none;
+    background-color:#EB1616;
+    /* background-color:#ffeded; */
+    /* margin:0.5rem; */
+}
+.links li a{
+    /* color:#212121; */
+}
+.tlink a{
+    align-items: center; justify-content: end;
+}
+/* removing desktop timer */
+.timer-mob{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    color:white;
+    margin:1rem;
+}
+.beginText{
+    margin-bottom:1rem;
+    font-size: 2rem;
+}
+.timer-mob th{
+    font-size:1.2rem;   
+    text-align: center;
+    padding:0.5rem;
+}
+.timer-mob td{
+    text-align: center;
+    font-size: 3rem;
+}
+.timer-desk{
+    display:none;
+}
+.flexbox1{
+    flex-direction: column;
+}
+.tlink a{
+    font-size: small;
+    padding:0.5rem;
+    margin:0;
+}
+li.tlink{
+    padding-left:0.5rem;
+}
