@@ -1,4 +1,7 @@
+/* poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
 /* basic template styling*/
 *{
@@ -7,29 +10,156 @@
     box-sizing: border-box;
 }
 html{
-    /* overflow:hidden; */
+    overflow:hidden;
     scroll-behavior: smooth;
 }
 body{
     background-color: black;
 }
+section{
+    min-height: 100vh;
+    padding:0;
+    margin:0;
+}
 /* Nav Bar Styling*/
+
+#mob-navbar{
+    display: none;
+}
+.overlay{
+    display: none;
+}
+#mob-navbar{
+    transition:0.3s all ease;
+    position: static;
+    float:right;
+    display:none;
+    cursor: pointer;
+    margin:1rem;
+}
+#hamburger {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.25s linear;
+    width: clamp(1.5rem, 2vw + 1.1rem, 6rem);
+    height: clamp(2rem, 1.4vw + 1.7rem, 5rem);
+    display: flex;
+    align-items: center;
+  }
+  
+  #hamburger:hover {
+    opacity: 1;
+  }
+  
+  #hamburger div,
+  #hamburger div:after,
+  #hamburger div:before {
+    background-color: #fafafa;
+    border-radius: 10px;
+    width: clamp(1.5rem, 2vw + 1.1rem, 6rem);
+    height: clamp(0.2rem, 0.3vw + 0.1rem, 0.8rem);
+    transition: all 0.15s linear;
+  }
+  
+  #hamburger div:before,
+  #hamburger div:after {
+    content: "";
+    position: absolute;
+  }
+  
+  #hamburger div:before {
+    transform: translateY(-200%);
+  }
+  
+  #hamburger div:after {
+    transform: translateY(200%);
+  }
+  
+  #hamburger.open div {
+    background: transparent;
+  }
+  
+  #hamburger.open div:before {
+    transform: rotate(45deg);
+  }
+  
+  #hamburger.open div:after {
+    transform: rotate(-45deg);
+  }
+  
+  #overlay {
+    position: fixed;
+    width: 100%;
+    min-height: 100%;
+    background-color: #1a1a1a;
+    /* z-index: 2; */
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #overlay.menu {
+    transform: translateY(0%);
+  }
+  
+  #overlay a {
+    text-decoration: none;
+    color: #fafafa;
+    font-size: clamp(1rem, 4.1vw + 0.2rem, 10rem);
+    margin: 2%;
+    opacity: 0.5;
+    transition: opacity 0.2s linear;
+  }
+  
+  #overlay a:hover {
+    opacity: 1;
+  }
+
 .navbar{
     position:fixed;
-    left:-35.781rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    left:-36.781rem;
+    overflow: hidden;
     z-index: 9;
     transition:0.3s all ease;
 }
-.show-nav{
+.navbar-fs{
     position:fixed;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
     left:-35.781rem;
+    overflow: hidden;
     z-index: 9;
+    transition:0.3s all ease;
 }
 .show-all{
-    float:right;
+    margin-left:2rem;
     cursor: pointer;
+    transition:0.3s all ease-in-out;
+    background-color:#ffeded;
+    border-radius: 50%;
 }
-
+.show-all:hover{
+    background-color:rgb(252, 225, 225);
+}
+.show-all-fs{
+    margin-left:6rem;
+    cursor: pointer;
+    transition:0.3s all ease-in-out;
+    background-color:#ffeded;
+    border-radius: 50%;
+}
+.show-all-fs:hover{
+    background-color:rgb(252, 225, 225);
+}
 .circle{
     height: 46.938rem;
     width:46.938rem;
@@ -40,6 +170,7 @@ body{
     align-items: center;
     text-align: center;
     transition:0.3s all ease;
+    
 }
 .circle-fs{
     height: 60rem;
@@ -49,10 +180,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    /* top:-2%; */
+    text-align: right;
     transition:0.3s all ease;
 }
+.icons-list-fs{
+    margin-left:30rem;
+    list-style-type: none;
+}
+
 .circle .icons-list{
     margin-left:36rem;
     list-style-type: none;
@@ -60,12 +195,24 @@ body{
 .icons-list img{
     height:2.3rem;
 }
+.btn{
+    display: flex;
+}
+.btn a{
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:#212121;
+}
 .icon-desc{
     display:none;
+    padding:0;
+    display:flex;
+    text-align: center;
 }
-.icons-list-fs{
-    margin-left:9rem;
-    list-style-type: none;
+.icon-desc:hover{
+    border-bottom:2px solid tomato;
 }
 
 /* Homepage styling */
@@ -80,6 +227,7 @@ body{
     background-repeat: repeat;
     background-size: cover; */
     height:auto;
+    
     /* display:flex;
     flex-direction: column;
     align-items: center;
@@ -87,17 +235,24 @@ body{
 }
 #Home-Page{
     height:auto;
-    padding-bottom:2rem ;
+}
+.wrapper{
+    display:flex;
+    width:auto; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
 }
 /* ssit logo positioning */
 .ssit-logo{
+    /* width:100%; */
     margin-right:3.4rem;
     padding-top:2rem;
 }
 .ssit-logo img{
     float:right;
-    height:auto;
-    width:10.5rem;
+    width:8.5rem;
 }
 .h4c-logo{
     margin-left:4.4rem;
@@ -110,25 +265,29 @@ body{
     width:5.5rem;
 }
 
-
-
 /* heading styling and positioning */
 .heading{
-    margin-left:15.7rem;
-    margin-top:1.4rem;
+    /* margin-left:15.7rem; */
+    /* margin-top:auto; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
     /* display:flex;
     flex-direction: column;
     align-items:center; */
 }
 .before-title{
     margin-top:7rem;
-    width: fit-content;    
+    width: fit-content;
+    letter-spacing: 1rem;    
     color:white;
     font-family: 'Poppins',sans-serif;
     font-size:2rem;
 }
 .h4ctitle{
-    height:7rem;
+    height:10rem;
+    width:auto;
+    margin-right: 2rem;
 }
 
 
@@ -154,6 +313,7 @@ body{
    links one side , and logo on the other. */
 .flexbox1{
     display:flex;
+    padding:2rem;
     /* align-items: center; */
     justify-content:center;
 }
@@ -186,7 +346,7 @@ body{
     background-color:#EB1616;
 }
 .h4cdesk{
-    height:25rem;
+    height:20rem;
     width:auto;
     transform: rotate(-23.03deg);
     /* margin-left:10rem; */
@@ -201,9 +361,9 @@ body{
 }
 /* styling and positioning of timer in desktop */
 .timer-desk{
-    margin-left:2rem;
-    margin-bottom:4rem;
-    margin-top:2rem;
+    /* margin-left:2rem; */
+    margin-bottom:1rem;
+    /* margin-top:2rem; */
     font-size:2rem;
     color:#ffeded;
     display: flex;

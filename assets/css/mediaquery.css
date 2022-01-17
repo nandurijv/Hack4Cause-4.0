@@ -1,24 +1,32 @@
 /* to make the ssit logo and before-title in different lines */
-nav{
+.navbar{
     display:none;
 }
-
+#mob-navbar{
+    display: block;
+    position:absolute;
+    right:6px;
+    top:6px;
+}
 .homeParent{
     padding:0;
     margin:0;
     height:auto;
 }
 /* positioning of ssit logo */
+section{
+    display: block;
+}
 .ssit-logo{
     padding:0;
     margin:0;
+    width: fit-content;
     margin-top:2rem;
     margin-left:1rem;
 }
 .ssit-logo img{
     float:none;
-    height:3rem;
-    width:auto;
+    height:4rem;
 }
 .h4c-logo{
     display:none;
@@ -31,9 +39,12 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* width:fit-content; */
+
 }
 .before-title{
     position: relative;
+    letter-spacing: 0.3rem;
     margin:0;
     margin-top:1rem;
     margin-bottom:0.5rem;
@@ -41,14 +52,22 @@ nav{
     font-size:16px;
     display:flex;
     justify-content: center;
+    z-index: -1;
     /* display:none; */
 }
 .h4ctitle{
     width:18rem;
     height:auto;
+    margin:0;
     /* display: none; */
 }
+
 /* displaying mobile h4c logo and hiding desktop logo */
+.wrapper{
+    justify-content: space-around;
+    padding:0;
+    margin:0;
+}
 .title{
     display:flex;
     flex-direction: column;
@@ -67,6 +86,7 @@ nav{
 /* styling buttons */
 .flexbox1{
     margin:0;
+    padding:0;
     display:flex;
     justify-content: justify;
     

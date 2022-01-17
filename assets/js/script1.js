@@ -1,29 +1,57 @@
+let desc = document.getElementsByClassName('icon-desc');
+        Array.from(desc).forEach(element=>{
+            element.style.display = "none";
+        })
 // changing color of icon in nav bar on hover.
 let a = document.getElementsByClassName('home');
-Array.from(a).forEach(function (element, index) {
+var activeCurr = document.getElementsByClassName("Home-Page")[0].getAttribute('src');
+var activeElement = document.getElementsByClassName("Home-Page")[0];
+Array.from(a).forEach(function changeIcons(element, index) {
     let c = element.className.split(' ');
-    let curr = `something`;
+    let curr;
+    let temp;
     element.addEventListener('mouseenter', () => {
-        curr = element.getAttribute('src');
+        temp = element.getAttribute('src');
         element.setAttribute('src', `./assets/images/${c[1]}-3.png`);
+        curr = element.getAttribute('src');
     });
-    element.addEventListener('click', function () {
-        let d = document.getElementsByClassName('activePageElement');
-        if (d[0].innerHTML != `<img src="../assets/images/${c[1]}-2.png">`) {
-            d[0].classList.add('animation');
-            setTimeout(function () {
-                d[0].innerHTML = `<img src="../assets/images/${c[1]}-2.png">`;
-                d[0].classList.remove('animation');
-            }, 300);
+    element.addEventListener('click', () => {
+        if (!element.classList.contains('active')) {
+            activeElement.classList.remove('active');
+            element.classList.add('active');
+            activeElement.setAttribute('src', `${activeCurr}`);
+            activeElement = element;
+            activeCurr = temp;
+        }
+    });
+    element.addEventListener('mouseleave', () => {
+        if (!element.classList.contains('active')) {
+            element.setAttribute('src', `${temp}`)
         }
 
-
-    })
-    element.addEventListener('mouseleave', () => {
-        element.setAttribute('src', `${curr}`)
     });
-
 });
+
+
+// mobile navbar
+(() => {
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("overlay");
+    let open = false;
+
+    const change = () => {
+        if (!open) {
+            hamburger.classList.add("open");
+            menu.classList.add("menu");
+        } else {
+            hamburger.classList.remove("open");
+            menu.classList.remove("menu");
+        }
+        open = !open;
+    };
+
+    hamburger.addEventListener("click", change);
+})();
 
 // to implement the countdown 
 // code inspired from : https://www.educative.io/edpresso/how-to-create-a-countdown-timer-using-javascript
@@ -94,33 +122,58 @@ var myfunc = setInterval(function () {
         document.getElementById("").innerHTML = "TIME UP!!";
     }
 }, 1000);
-//NAV BAR IMPLEMENTATION
-// let f = document.getElementById('show-all');
-// const temp = 0;
-// f.addEventListener('click', function () {
-//     if (temp == 0) {
-//         // document.getElementById('circle').classList.remove('circle');
-//         document.getElementById('navbar').classList.remove('navbar');
-//         document.getElementById('circle').classList.add('show-nav');
+// NAV BAR IMPLEMENTATION
 
-//         document.getElementsByClassName('icons-list')[0].classList.add('icons-list-fs');
-//         document.getElementsByClassName('icons-list')[0].classList.remove('icons-list');
-//         Array.from(document.getElementsByClassName('icon-desc')).forEach(function (element, index) {
-//             element.style.display = "block";
-//         });
+let fsbtn = document.getElementById('show-all');
+let q = 0;
+fsbtn.addEventListener('click', function () {
+    if (q == 0) {
+        fsbtn.classList.add('show-all-fs');
+        fsbtn.classList.remove('show-all');
 
-//         document.getElementsByClassName('circle')[0].classList.add('circle-fs');
-//         document.getElementsByClassName('circle')[0].classList.remove('circle');
-//     }
-//     else {
-//         document.getElementById('navbar').classList.add('navbar');
-//         document.getElementById('circle').classList.remove('show-nav');
-//         document.getElementsByClassName('nav-list')[0].classList.add('icons-list');
-//         document.getElementsByClassName('icons-list')[0].classList.remove('icons-list-fs'); \
-//         Array.from(document.getElementsByClassName('icon-desc')).forEach(function (element, index) {
-//             element.style.display = "none";
-//         });
-//         temp = 0;
-//     }
-// })
+        let circle = document.getElementsByClassName(('circle'))[0];
+        circle.classList.remove('circle');
+        circle.classList.add('circle-fs');
 
+        let navbar = document.getElementsByClassName(('navbar'))[0];
+        circle.classList.add('navbar-fs');
+        circle.classList.remove('navbar');
+
+        let iconlist = document.getElementsByClassName('icons-list')[0];
+        iconlist.classList.remove('icons-list');
+        iconlist.classList.add('icons-list-fs');
+
+        fsbtn.children[0].setAttribute('src', "https://img.icons8.com/ios-filled/50/000000/long-arrow-left.png");
+
+        desc = document.getElementsByClassName('icon-desc');
+        Array.from(desc).forEach(element=>{
+            element.style.display = "block";
+        })
+        
+        q = 1;
+    }
+    else {
+        fsbtn.classList.remove('show-all-fs');
+        fsbtn.classList.add('show-all');
+        let circle = document.getElementsByClassName(('circle-fs'))[0];
+        circle.classList.add('circle');
+        circle.classList.remove('circle-fs');
+
+        let navbar = document.getElementsByClassName(('navbar-fs'))[0];
+        circle.classList.add('navbar');
+        circle.classList.remove('navbar-fs');
+
+        let iconlist = document.getElementsByClassName('icons-list-fs')[0];
+        iconlist.classList.add('icons-list');
+        iconlist.classList.remove('icons-list-fs');
+
+        fsbtn.children[0].setAttribute('src', "https://img.icons8.com/ios-filled/50/000000/long-arrow-right.png");
+        
+        let desc = document.getElementsByClassName('icon-desc');
+        Array.from(desc).forEach(element=>{
+            element.style.display = "none";
+        })
+
+        q = 0;
+    }
+});
