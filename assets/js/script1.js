@@ -1,7 +1,7 @@
 let desc = document.getElementsByClassName('icon-desc');
-        Array.from(desc).forEach(element=>{
-            element.style.display = "none";
-        })
+Array.from(desc).forEach(element => {
+    element.style.display = "none";
+})
 // changing color of icon in nav bar on hover.
 let a = document.getElementsByClassName('home');
 var activeCurr = document.getElementsByClassName("Home-Page")[0].getAttribute('src');
@@ -13,9 +13,13 @@ Array.from(a).forEach(function changeIcons(element, index) {
     element.addEventListener('mouseenter', () => {
         temp = element.getAttribute('src');
         element.setAttribute('src', `./assets/images/${c[1]}-3.png`);
+        element.children[0].style.color = "red";
         curr = element.getAttribute('src');
     });
+
+
     element.addEventListener('click', () => {
+        
         if (!element.classList.contains('active')) {
             activeElement.classList.remove('active');
             element.classList.add('active');
@@ -43,13 +47,13 @@ Array.from(a).forEach(function changeIcons(element, index) {
         if (!open) {
             hamburger.classList.add("open");
             menu.classList.add("menu");
+            
         } else {
             hamburger.classList.remove("open");
             menu.classList.remove("menu");
         }
         open = !open;
     };
-
     hamburger.addEventListener("click", change);
 })();
 
@@ -146,10 +150,10 @@ fsbtn.addEventListener('click', function () {
         fsbtn.children[0].setAttribute('src', "https://img.icons8.com/ios-filled/50/000000/long-arrow-left.png");
 
         desc = document.getElementsByClassName('icon-desc');
-        Array.from(desc).forEach(element=>{
+        Array.from(desc).forEach(element => {
             element.style.display = "block";
         })
-        
+
         q = 1;
     }
     else {
@@ -168,12 +172,13 @@ fsbtn.addEventListener('click', function () {
         iconlist.classList.remove('icons-list-fs');
 
         fsbtn.children[0].setAttribute('src', "https://img.icons8.com/ios-filled/50/000000/long-arrow-right.png");
-        
+
         let desc = document.getElementsByClassName('icon-desc');
-        Array.from(desc).forEach(element=>{
+        Array.from(desc).forEach(element => {
             element.style.display = "none";
         })
 
         q = 0;
     }
 });
+

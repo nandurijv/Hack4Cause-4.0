@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 html{
-    overflow:hidden;
+    overflow:visible;
     scroll-behavior: smooth;
 }
 body{
@@ -31,14 +31,14 @@ section{
 }
 #mob-navbar{
     transition:0.3s all ease;
-    position: static;
     float:right;
     display:none;
     cursor: pointer;
-    margin:1rem;
+    margin-right:2rem;
 }
 #hamburger {
     opacity: 0.5;
+    position:fixed;
     cursor: pointer;
     transition: opacity 0.25s linear;
     width: clamp(1.5rem, 2vw + 1.1rem, 6rem);
@@ -92,7 +92,7 @@ section{
     width: 100%;
     min-height: 100%;
     background-color: #1a1a1a;
-    /* z-index: 2; */
+    z-index: 0;
     transform: translateY(-100%);
     transition: all 0.5s ease-in-out;
     display: flex;
@@ -173,8 +173,8 @@ section{
     
 }
 .circle-fs{
-    height: 60rem;
-    width:60rem;
+    height: 56rem;
+    width:56rem;
     background-color: #ffeded;
     border-radius: 50%;
     display: flex;
@@ -184,7 +184,7 @@ section{
     transition:0.3s all ease;
 }
 .icons-list-fs{
-    margin-left:30rem;
+    margin-left:32rem;
     list-style-type: none;
 }
 
@@ -198,21 +198,23 @@ section{
 .btn{
     display: flex;
 }
+
 .btn a{
     text-decoration: none;
+}
+.flxbox2{
     display:flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     color:#212121;
+    padding:0;
 }
 .icon-desc{
     display:none;
     padding:0;
     display:flex;
     text-align: center;
-}
-.icon-desc:hover{
-    border-bottom:2px solid tomato;
 }
 
 /* Homepage styling */
@@ -241,7 +243,7 @@ section{
     width:auto; 
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
 }
 /* ssit logo positioning */
@@ -386,7 +388,49 @@ section{
 }
 /* atyling about us section */
 #about-us{
-    height:100vh;
+    height:auto;
     background-color:#212121;
 }
 
+.main-heading{
+    margin-top:2rem;
+    color:#fafafa;
+    font-size: 4rem;
+    font-family: 'Montserrat',sans-serif;
+}
+.info{
+    padding:2rem;
+    max-width:50rem;
+    color:#ffeded;
+    text-align: justify;
+    line-height: 2rem;
+    font-family: 'Montserrat';
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: baseline;
+    height:80vh;
+    overflow: scroll;
+}
+.row{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin:2rem;
+}
+.card{
+    background-color:#ffeded;
+    font-family: 'Montserrat';
+    font-size: large;
+    margin:4rem;
+    width:30rem;
+    height:15rem;
+    border:1px solid #EB1616;
+    padding:2rem;
+}
+.card:hover{
+    box-shadow: 5px 5px 4px 5px #212121;
+}

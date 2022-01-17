@@ -105,7 +105,7 @@ section{
     /* margin:0.5rem; */
 }
 .links li a{
-    /* color:#212121; */
+    color:#212121;
 }
 .tlink a{
     align-items: center; justify-content: end;
@@ -145,4 +145,23 @@ section{
 }
 li.tlink{
     padding-left:0.5rem;
+}
+.info{
+    margin:0;
+    width:auto;
+}
+.card{
+    display:block;
+    flex:none;
+    height:auto;
+    width:20rem;
+    /* margin-bottom:1rem; */
+    margin: 1rem;
+    padding:2rem;
+    font-size: small;
+    text-align: justify;
+}
+.row{
+    flex-direction: column;
+    justify-content: space-around;
 }
