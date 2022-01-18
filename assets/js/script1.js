@@ -41,22 +41,26 @@ Array.from(a).forEach(function changeIcons(element, index) {
 (() => {
     const hamburger = document.getElementById("hamburger");
     const menu = document.getElementById("overlay");
+
     let open = false;
 
     const change = () => {
-        if (!open) {
-            hamburger.classList.add("open");
-            menu.classList.add("menu");
-            
-        } else {
-            hamburger.classList.remove("open");
-            menu.classList.remove("menu");
-        }
-        open = !open;
+      if (!open) {
+        hamburger.classList.add("open");
+        menu.classList.add("menu");
+      } else {
+        hamburger.classList.remove("open");
+        menu.classList.remove("menu");
+      }
+      open = !open;
     };
-    hamburger.addEventListener("click", change);
-})();
 
+    hamburger.addEventListener("click", change);
+    const links = document.getElementById('overlay').children;
+  Array.from(links).forEach(element => {
+    element.addEventListener("click",change);
+  });
+  })();
 // to implement the countdown 
 // code inspired from : https://www.educative.io/edpresso/how-to-create-a-countdown-timer-using-javascript
 
@@ -76,42 +80,14 @@ var myfunc = setInterval(function () {
     var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
     // Result is output to the specific element
-    if (days == 0) {
-        document.getElementById("days").style.display = "none";
-        document.getElementById("days-2").style.display = "none";
-        document.getElementById("d-head").style.display = "none";
-
-    }
-    else {
-        document.getElementById("days").innerHTML = days;
-        document.getElementById("days-2").innerHTML = days;
-    }
-
-    if (hours == 0) {
-        document.getElementById("hours").style.display = "none";
-        document.getElementById("hours-2").style.display = "none";
-        document.getElementById("h-head").style.display = "none";
-    }
-    else {
-        document.getElementById("hours").innerHTML = days;
-        document.getElementById("hours-2").innerHTML = days;
-    }
-
-    if (minutes == 0) {
-        document.getElementById("minutes").style.display = "none";
-        document.getElementById("minutes-2").style.display = "none";
-        document.getElementById("m-head").style.display = "none";
-    }
-    else {
-        document.getElementById("minutes").innerHTML = days;
-        document.getElementById("minutes-2").innerHTML = days;
-    }
-
-
+    
+    document.getElementById("days").innerHTML = days
     document.getElementById("hours").innerHTML = hours
     document.getElementById("minutes").innerHTML = minutes
-    document.getElementById("seconds").innerHTML = seconds
+    document.getElementById("seconds").innerHTML = `<span style="color:#eb1616">${seconds}</span`;
 
+
+    document.getElementById("days-2").innerHTML = days
     document.getElementById("hours-2").innerHTML = hours
     document.getElementById("minutes-2").innerHTML = minutes
     document.getElementById("seconds-2").innerHTML = seconds
@@ -153,7 +129,7 @@ fsbtn.addEventListener('click', function () {
         Array.from(desc).forEach(element => {
             element.style.display = "block";
         })
-
+        // document.getElementsByClassName('clos-all')[0].style.display="block";
         q = 1;
     }
     else {
@@ -177,8 +153,7 @@ fsbtn.addEventListener('click', function () {
         Array.from(desc).forEach(element => {
             element.style.display = "none";
         })
-
+        // document.getElementsByClassName('clos-all')[0].style.display="none";
         q = 0;
     }
 });
-
