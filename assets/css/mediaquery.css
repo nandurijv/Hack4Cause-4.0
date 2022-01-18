@@ -31,6 +31,9 @@ section{
 .h4c-logo{
     display:none;
 }
+.main-heading{
+    font-size: 32px;
+}
 /* positioning and styling of title and before title */
 .heading{
     padding:0;
@@ -133,6 +136,7 @@ section{
 .timer-mob td{
     text-align: center;
     font-size: 3rem;
+    font-family: monospace;
 }
 .timer-desk{
     display:none;
@@ -157,13 +161,15 @@ li.tlink{
 .card{
     display:block;
     flex:none;
-    height:15rem;
+    height:auto;
     width:20rem;
     /* margin-bottom:1rem; */
-    margin: 1rem;
+    margin: 2rem;
     padding:2rem;
     font-size: small;
     text-align: justify;
+    opacity:100%;
+    box-shadow: 3px 3px 0px 0px rgb(27, 26, 26);
 }
 .row{
     flex-direction: column;

@@ -143,6 +143,17 @@ section{
     z-index: 9;
     transition:0.3s all ease;
 }
+.navbar-onclick{
+    position:fixed;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    left:-40.781rem;
+    overflow: hidden;
+    z-index: 9;
+    transition:0.3s all ease;
+}
 .show-all{
     margin-left:2rem;
     cursor: pointer;
@@ -150,14 +161,7 @@ section{
     background-color:#ffeded;
     border-radius: 50%;
 }
-.close-all{
-    margin-left:2rem;
-    cursor: pointer;
-    transition:0.3s all ease-in-out;
-    background-color:#ffeded;
-    border-radius: 50%;
-    display:none;
-}
+
 .show-all:hover{
     background-color:rgb(252, 225, 225);
 }
@@ -283,7 +287,7 @@ section{
 
 /* heading styling and positioning */
 .heading{
-    margin-left:9.7rem;
+    margin-left:5.7rem;
     /* margin-top:auto; */
     display:flex;
     align-items: center;
@@ -293,7 +297,7 @@ section{
     align-items:center; */
 }
 .before-title{
-    margin-top:7rem;
+    margin-top:4rem;
     width: fit-content;
     letter-spacing: 1rem;    
     color:white;
@@ -392,6 +396,7 @@ section{
 }
 .timer-desk td{
     padding-right:1.5rem;
+    font-family: monospace;
 }
 /* styling navbar icons */
 .home{
@@ -403,49 +408,70 @@ section{
 /* atyling about us section */
 #about-us{
     height:auto;
-    background-color:#212121;
+    /* background-color:#212121; */
 }
-
+.about-us{
+    background:url('../images/Desktop\ -\ 1.png')
+}
 .main-heading{
     margin-top:2rem;
     color:#fafafa;
     font-size: 4rem;
-    font-family: 'Montserrat',sans-serif;
+    /* border-top:2px solid white;
+    border-bottom:2px solid white; */
+    padding:2rem;
+    /* width:100%; */
+    /* text-align:center; */
 }
 .info{
+    margin:2rem;
     padding:2rem;
     max-width:50rem;
     color:#ffeded;
+    
     text-align: justify;
     line-height: 2rem;
     font-family: 'Montserrat';
 }
 .card-container{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     align-items: baseline;
-    justify-content: baseline;
+    justify-content: center;
     height:auto;
 }
-.row{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin:2rem;
-}
+
 .card{
     background-color:#212121;
-    color:#ffeded;
+    color:rgb(161, 159, 159);
     font-family: 'Montserrat';
-    font-size: large;
     margin:2rem;
     width:30rem;
     height:15rem;
     transition:0.3s all ease;
     padding:2rem;
     border-radius:2rem;
+    transform: translateY(150px);
+    opacity:0;
+    text-align:justify;
+    transition:0.3s all ease-in-out;
+
 }
 .card:hover{
     border:1px solid #ffeded;
+    /* box-shadow: 3px 3px 0px 0px rgb(71, 71, 71); */
+    opacity:1;
+}
+
+.card-head{
+    font-size: 28px;
+    text-align: center;
+    color:#FFEDED;
+}
+.active1{
+    position:relative;
+    transform: translateY(0px);
+    opacity:1;
+
 }

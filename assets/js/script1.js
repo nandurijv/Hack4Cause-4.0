@@ -36,7 +36,6 @@ Array.from(a).forEach(function changeIcons(element, index) {
     });
 });
 
-
 // mobile navbar
 (() => {
     const hamburger = document.getElementById("hamburger");

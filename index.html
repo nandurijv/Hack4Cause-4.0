@@ -15,7 +15,9 @@
 <body>
     <!-- navbar section -->
     <!-- <div id="particles-js"></div> -->
+    <!-- <div class="close"><img src="./assets/images/Close.png"></div> -->
     <nav id="navbar" class="navbar">
+
         <div id="circle" class="circle">
             <ul class="nav-list icons-list">
                 <li class="btn">
@@ -60,19 +62,18 @@
             </ul>
             <div class="show-all" id="show-all"><img
                     src="https://img.icons8.com/ios-filled/50/000000/long-arrow-right.png" /></div>
-            <div class="close-all"><img src="https://img.icons8.com/ios-filled/50/000000/delete-sign--v1.png"/></div>
             <!-- <div id="ape" class="activePageElement"><img class="Home-Page" src="./assets/images/Home-Page-2.png"></div> -->
         </div>
     </nav>
     <div id="overlay">
-        <a href="#Home-Page">Home</a>
-        <a href="#about-us">About Us</a>
-        <a href="#tracks">Tracks</a>
-        <a href="#domains">Domains</a>
-        <a href="#speakers">Speakers</a>
-        <a href="#sponsors">Sponsors</a>
-        <a href="#faq">F.A.Qs</a>
-        <a href="#contact">Contact Us</a>
+        <a href="#Home-Page">Home</a><br>
+        <a href="#about-us">About Us</a>><br>
+        <a href="#tracks">Tracks</a><br>
+        <a href="#domains">Domains</a><br>
+        <a href="#speakers">Speakers</a><br>
+        <a href="#sponsors">Sponsors</a><br>
+        <a href="#faq">F.A.Qs</a><br>
+        <a href="#contact">Contact Us</a><br>
     </div>
     <div id="mob-navbar">
         <div id="hamburger">
@@ -184,48 +185,55 @@
             <div class="wrapper">
                 <div class="main-heading">TRACKS</div>
                 <div class="card-container">
-                    <div class="row">
-                        <div class="card">Healthcare<br>
-                            In India, considerable work has been done to reform the healthcare sector, which has
-                            involves the government and various stakeholders. Delivering affordable health care to
-                            billions of people presents enormous challenges for the medical community
-                        </div>
-                        <div class="card">Agriculture<br>
-                            Being the primary source of income for more than half the nation, advancements in the field
-                            of agriculture are synchronous with the nation's strides towards becoming a global
-                            superpower.</div>
+                    <div class="card">
+                        <div class="card-head">Healthcare</div><br>
+                        In India, considerable work has been done to reform the healthcare sector, which has
+                        involves the government and various stakeholders. Delivering affordable health care to
+                        billions of people presents enormous challenges for the medical community
                     </div>
-                    <div class="row">
-                        <div class="card">Education & Productivity<br>
-                            Education is the foundation on which the development of every citizen and the nation as a
-                            whole built on. Education can shape an individual's life, both in the classroom and outside.
-                            Productivity is very essential in every sector for rapid development</div>
-                        <div class="card">Crisis and Disaster Management<br>
-                            Disaster Management can be defined as the organization and management of resources and
-                            responsibilities for dealing with all humanitarian aspects of emergencies.</div>
+                    <div class="card">
+                        <div class="card-head">Agriculture</div><br>
+                        Being the primary source of income for more than half the nation, advancements in the field
+                        of agriculture are synchronous with the nation's strides towards becoming a global
+                        superpower.
                     </div>
-                    <div class="row">
-                        <div class="card">Security & Surveillance<br>
-                            Security and surveillance are implemented by criminal justice agencies to maintain order,
-                            enforce the law and to reduce victimization in the society.</div>
-                        <div class="card">Industrial Development<br>
-                            With the start of industrial revolution in late 1800s, industrial development is seen as a
-                            key player to determine a nation's human development and quality of living.</div>
-                    </div>
-                    <div class="row">
-                        <div class="card">
-                            <div class="head">Open Innovation</div><br>
-                            Fintech has also been a key game changer for entrepreneurs, making it easier for startups
-                            and small businesses to secure loans, manage payroll, and process payments.
-                        </div>
-                        <div class="card">
-                            <div class="head">Open Innovation</div><br>
-                            <div>
-                                Open innovation is a concept AI originated that falls directly in the gap between
-                                business and academics. It leads to greater technological advancements in a relatively
-                                shorter time because together we work, together we innovate.</div>
 
-                        </div>
+
+                    <div class="card">
+                        <div class="card-head">Education & Productivity</div><br>
+                        Education is the foundation on which the development of every citizen and the nation as a
+                        whole built on. Education can shape an individual's life, both in the classroom and outside.
+                        Productivity is very essential in every sector for rapid development
+                    </div>
+                    <div class="card">
+                        <div class="card-head">Crisis and Disaster Management</div><br>
+                        Disaster Management can be defined as the organization and management of resources and
+                        responsibilities for dealing with all humanitarian aspects of emergencies.
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-head">Security & Surveillance</div><br>
+                        Security and surveillance are implemented by criminal justice agencies to maintain order,
+                        enforce the law and to reduce victimization in the society.
+                    </div>
+                    <div class="card">
+                        <div class="card-head">Industrial Development</div><br>
+                        With the start of industrial revolution in late 1800s, industrial development is seen as a
+                        key player to determine a nation's human development and quality of living.
+                    </div>
+                    <div class="card">
+                        <div class="card-head">FinTech</div><br>
+                        Fintech has also been a key game changer for entrepreneurs, making it easier for startups
+                        and small businesses to secure loans, manage payroll, and process payments.
+                    </div>
+                    <div class="card">
+                        <div class="card-head">Open Innovation</div><br>
+                        <div>
+                            Open innovation is a concept AI originated that falls directly in the gap between
+                            business and academics. It leads to greater technological advancements in a relatively
+                            shorter time because together we work, together we innovate.</div>
+
                     </div>
                 </div>
         </section>
@@ -265,6 +273,24 @@
 
     <!-- js -->
     <script src="assets/js/script1.js"></script>
+    <script>
+        window.addEventListener('scroll', reveal);
+        function reveal() {
+            var reveals = document.getElementsByClassName('card');
+            Array.from(reveals).forEach(element => {
+                var windowHeight = window.innerHeight;
+                var revealTop = element.getBoundingClientRect().top;
+                var revealPoint = 150;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    element.classList.add('active1');
+                }
+                else {
+                    element.classList.remove('active1');
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
