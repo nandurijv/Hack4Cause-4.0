@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 html{
-    
+    scrollbar-color: #eb1616;
     scroll-behavior: smooth;
 }
 body{
@@ -251,6 +251,14 @@ section{
 }
 #Home-Page{
     height:auto;
+    /* background-color: #212121; */
+    background:url('../images/spark1.jpeg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    animation:a3 infinite linear alternate;
+}
+@keyframes a3 {
+    100%{background-position:10vw;}
     
 }
 .wrapper{
@@ -313,6 +321,10 @@ section{
 
 
 /* buttons, countdown and logo */
+.tlink{
+    padding:0;
+    margin:0;
+}
 .tlink a{
     display:flex;
     align-items: center;
@@ -333,7 +345,7 @@ section{
    links one side , and logo on the other. */
 .flexbox1{
     display:flex;
-    padding:2rem;
+    /* padding:2rem; */
     /* align-items: center; */
     justify-content:center;
 }
@@ -381,8 +393,8 @@ section{
 }
 /* styling and positioning of timer in desktop */
 .timer-desk{
-    /* margin-left:2rem; */
-    margin-bottom:1rem;
+    margin-left:2rem;
+    margin-bottom:2rem;
     /* margin-top:2rem; */
     font-size:2rem;
     color:#ffeded;
@@ -405,14 +417,22 @@ section{
     margin:1rem;
     padding:0;
 }
+
 /* atyling about us section */
 #about-us{
     height:auto;
     /* background-color:#212121; */
+    /* background:url('../images/spark4.jpeg');
+    background-repeat:no-repeat;
+    background-size: cover; */
 }
-.about-us{
-    background:url('../images/Desktop\ -\ 1.png')
+.contact{
+    background:url('../images/spark2.jpeg');
+    background-repeat:no-repeat;
+    background-size: cover;
 }
+
+
 .main-heading{
     margin-top:2rem;
     color:#fafafa;
@@ -474,4 +494,46 @@ section{
     transform: translateY(0px);
     opacity:1;
 
+}
+
+
+
+
+
+/* contact us styling */
+.logos{
+    display:flex;
+    flex-direction: row;
+    margin-top:2rem;
+}
+.logo{
+    margin:2rem;
+}
+.con-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+    /* margin-right:2rem; */
+}
+.container{
+    display:flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    padding:0;
+    margin-top:4rem;
+}
+.container a{
+    text-decoration: none;
+    color:#ffeded;
+}
+.footer{
+    /* margin-top:2rem; */
+    color:#FFEDED;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:6rem;
 }

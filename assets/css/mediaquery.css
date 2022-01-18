@@ -175,3 +175,7 @@ li.tlink{
     flex-direction: column;
     justify-content: space-around;
 }
+.con-info{
+    flex-direction: column;
+}
+

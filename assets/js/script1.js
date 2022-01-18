@@ -19,13 +19,14 @@ Array.from(a).forEach(function changeIcons(element, index) {
 
 
     element.addEventListener('click', () => {
-        
+
         if (!element.classList.contains('active')) {
             activeElement.classList.remove('active');
             element.classList.add('active');
             activeElement.setAttribute('src', `${activeCurr}`);
             activeElement = element;
             activeCurr = temp;
+
         }
     });
     element.addEventListener('mouseleave', () => {
@@ -44,22 +45,22 @@ Array.from(a).forEach(function changeIcons(element, index) {
     let open = false;
 
     const change = () => {
-      if (!open) {
-        hamburger.classList.add("open");
-        menu.classList.add("menu");
-      } else {
-        hamburger.classList.remove("open");
-        menu.classList.remove("menu");
-      }
-      open = !open;
+        if (!open) {
+            hamburger.classList.add("open");
+            menu.classList.add("menu");
+        } else {
+            hamburger.classList.remove("open");
+            menu.classList.remove("menu");
+        }
+        open = !open;
     };
 
     hamburger.addEventListener("click", change);
     const links = document.getElementById('overlay').children;
-  Array.from(links).forEach(element => {
-    element.addEventListener("click",change);
-  });
-  })();
+    Array.from(links).forEach(element => {
+        element.addEventListener("click", change);
+    });
+})();
 // to implement the countdown 
 // code inspired from : https://www.educative.io/edpresso/how-to-create-a-countdown-timer-using-javascript
 
@@ -79,7 +80,7 @@ var myfunc = setInterval(function () {
     var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
     // Result is output to the specific element
-    
+
     document.getElementById("days").innerHTML = days
     document.getElementById("hours").innerHTML = hours
     document.getElementById("minutes").innerHTML = minutes
@@ -156,3 +157,51 @@ fsbtn.addEventListener('click', function () {
         q = 0;
     }
 });
+
+// for contact icons: hover effect 
+
+let facebook = document.getElementsByClassName('facebook')[0];
+facebook.addEventListener('mouseenter', () => {
+    facebook.children[0].setAttribute('src', 'assets/images/Facebook1.png')
+})
+facebook.addEventListener('mouseleave', () => {
+    facebook.children[0].setAttribute('src', 'assets/images/Facebook.png')
+})
+
+let instagram = document.getElementsByClassName('instagram')[0];
+instagram.addEventListener('mouseenter', () => {
+    instagram.children[0].setAttribute('src', 'assets/images/Instagram.png')
+})
+instagram.addEventListener('mouseleave', () => {
+    instagram.children[0].setAttribute('src', 'assets/images/Instagram-1.png')
+})
+
+let youtube = document.getElementsByClassName('youtube')[0];
+youtube.addEventListener('mouseenter', () => {
+    youtube.children[0].setAttribute('src', 'assets/images/YouTube.png')
+})
+youtube.addEventListener('mouseleave', () => {
+    youtube.children[0].setAttribute('src', 'assets/images/YouTube-1.png')
+})
+
+let linkedin = document.getElementsByClassName('linkedin')[0];
+linkedin.addEventListener('mouseenter', () => {
+    linkedin.children[0].setAttribute('src', 'assets/images/LinkedIn Circled-1.png')
+})
+linkedin.addEventListener('mouseleave', () => {
+    linkedin.children[0].setAttribute('src', 'assets/images/LinkedIn Circled.png')
+})
+let whatsapp = document.getElementsByClassName('whatsapp')[0];
+whatsapp.addEventListener('mouseenter', () => {
+    whatsapp.children[0].setAttribute('src', 'assets/images/Whatsapp-1.png')
+})
+whatsapp.addEventListener('mouseleave', () => {
+    whatsapp.children[0].setAttribute('src', 'assets/images/Whatsapp.png')
+})
+let gmail = document.getElementsByClassName('gmail')[0];
+gmail.addEventListener('mouseenter', () => {
+    gmail.children[0].setAttribute('src', 'assets/images/Gmail logo-1.png')
+})
+gmail.addEventListener('mouseleave', () => {
+    gmail.children[0].setAttribute('src', 'assets/images/Gmail logo.png')
+})
