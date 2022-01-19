@@ -209,6 +209,7 @@ li.tlink{
 }
 .contact .wrapper{
     min-height:100vh;
+    justify-content: center;
 }
 .contact .main-heading{
     display:none;
