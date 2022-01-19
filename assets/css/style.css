@@ -432,12 +432,12 @@ section{
 
 
 .main-heading{
-    margin-top:2rem;
+    /* margin-top:4rem; */
     color:#fafafa;
     font-size: 4rem;
     /* border-top:2px solid white;
     border-bottom:2px solid white; */
-    padding:2rem;
+    /* padding:2rem; */
     /* width:100%; */
     /* text-align:center; */
 }
@@ -503,10 +503,10 @@ section{
 
 /* contact us styling */
 .contact .wrapper{
-    height:auto;
+    height:100vh;
 }
 .contact .main-heading{
-    margin:0;
+    display:none;
 }
 .logos{
     display:flex;
@@ -539,13 +539,8 @@ section{
     margin-left:2rem;
     margin-right:2rem;
 }
-.contact-menu li{
-    margin:0.5rem;
-    list-style-type: none;
-}
-.contact-menu a{
-    text-decoration: none;
-    color:#ffeded;
+.contact-menu{
+    display:none;
 }
 
 .footer{

@@ -67,7 +67,7 @@ section{
 
 /* displaying mobile h4c logo and hiding desktop logo */
 .wrapper{
-    justify-content: space-around;
+    justify-content: center;
     padding:0;
     margin:0;
 }
@@ -186,6 +186,20 @@ li.tlink{
 .navigation-mob{
     display: block;
 }
+.container{
+    margin-bottom:1rem;
+}
 .contact .wrapper{
     min-height:100vh;
+}
+.contact-menu{
+    display:block;
+}
+.contact-menu li{
+    margin:0.5rem;
+    list-style-type: none;
+}
+.contact-menu a{
+    text-decoration: none;
+    color:#ffeded;
 }
