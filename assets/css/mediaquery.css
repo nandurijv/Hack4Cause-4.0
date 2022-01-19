@@ -8,6 +8,10 @@
     top:6px; */
     margin:2rem;
 }
+#overlay a{
+    font-size: 1rem;
+}
+
 .homeParent{
     padding:0;
     margin:0;
@@ -170,14 +174,19 @@ li.tlink{
     font-size: small;
     text-align: justify;
     opacity:100%;
-    box-shadow: 3px 3px 0px 0px rgb(27, 26, 26);
+    box-shadow: 5px 5px #eb1616a2;
+}
+.card1-container{
+    width:80vw;
+}
+.card1-head{
+    font-size:1.5rem;
 }
 
-.row{
-    flex-direction: column;
-    justify-content: space-around;
-}
 /* sponsors section */
+.sponsors{
+    height:auto;
+}
 .sponsors .wrapper{
     min-height:100vh;
 }

@@ -365,7 +365,7 @@ section{
 .card{
     background-color:#FFEDED;
     /* border:1px solid #212121; */
-    box-shadow:5px 5px #212121;
+    box-shadow: 5px 5px #eb1616b4;
     color:rgb(161, 159, 159);
     font-family: 'Montserrat';
     margin:2rem;
@@ -380,24 +380,22 @@ section{
     transition:0.3s all ease-in-out;
     color:#212121;
 }
-
 .card-img{
     float:right;
-    margin-top:1rem;
+    /* margin-top:1rem; */
 }
 .card-img img{
     height:50px;
 }
 .card-desc{
-    height:8rem;
+    height:7rem;
 }
 .card-desc-ex{
-    height:6rem;
+    height:5rem;
 }
 
 .card:hover{
     /* border:none; */
-    /* box-shadow: none; */
     opacity:1;
 }
 
@@ -414,8 +412,42 @@ section{
     opacity:1;
 
 }
+.group1{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.card1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card1-container{
+    display:flex;
+    flex-direction: column;
+    height:20vh;
+    width:40vw;
+    align-items: center;
+    justify-content: center;
+    background-color:#212121;
+    box-shadow: 5px 5px #2e2b2b;
+    margin:2rem;
+}
+.card1-head{
+    color:#ffeded;
+    text-align: center;
+    font-size: 2rem;
+}
 
-
+.card1-img{
+    position:absolute;
+    opacity:25%;
+}
+.card1-img img{
+    height:100px;
+}
 
 /* sponsors section styling */
 .sponsors .main-heading{
