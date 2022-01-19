@@ -192,6 +192,9 @@ li.tlink{
 .contact .wrapper{
     min-height:100vh;
 }
+.contact .main-heading{
+    display:none;
+}
 .contact-menu{
     display:block;
 }

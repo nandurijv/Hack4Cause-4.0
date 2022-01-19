@@ -19,6 +19,7 @@ body{
     background-color: black;
 }
 section{
+    min-height:100vh;
     padding:0;
     margin:0;
 }
@@ -432,7 +433,7 @@ section{
 
 
 .main-heading{
-    /* margin-top:4rem; */
+    margin-top:2rem;
     color:#fafafa;
     font-size: 4rem;
     /* border-top:2px solid white;
@@ -499,6 +500,23 @@ section{
 
 
 
+/* sponsors section styling */
+
+.sponsors .wrapper{
+    background:url('../images/sponsor-bg.png');
+    animation: bg 10s linear infinite;
+    height:100vh;
+}
+@keyframes bg {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 500px 0;
+    }
+  }
+
+
 
 
 /* contact us styling */
@@ -508,6 +526,7 @@ section{
 .contact .main-heading{
     display:none;
 }
+
 .logos{
     display:flex;
     flex-direction: row;
@@ -540,9 +559,16 @@ section{
     margin-right:2rem;
 }
 .contact-menu{
-    display:none;
+    display:menu;
 }
-
+.contact-menu li{
+    margin:0.5rem;
+    list-style-type: none;
+}
+.contact-menu a{
+    text-decoration: none;
+    color:#ffeded;
+}
 .footer{
     /* margin-top:2rem; */
     color:#FFEDED;
