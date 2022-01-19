@@ -127,7 +127,7 @@ section{
     align-items: center;
     justify-content: center;
     height:100vh;
-    left:-38.781rem;
+    left:-35.781rem;
     overflow: hidden;
     z-index: 9;
     transition:0.3s all ease;
@@ -176,10 +176,10 @@ section{
     background-color:rgb(252, 225, 225);
 }
 .circle{
-    height: 46.938rem;
-    width:46.938rem;
+    height: 40.938rem;
+    width:40.938rem;
     background-color: #ffeded;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,7 +203,7 @@ section{
 }
 
 .circle .icons-list{
-    margin-left:37rem;
+    margin-left:40rem;
     list-style-type: none;
 }
 .icons-list img{
@@ -522,6 +522,7 @@ section{
 /* contact us styling */
 .contact .wrapper{
     height:100vh;
+    justify-content: center;
 }
 .contact .main-heading{
     display:none;
@@ -579,7 +580,7 @@ section{
     /* margin-top:4rem; */
 }
 .ssit img{
-    margin:2rem;
+    margin-bottom:2rem;
 }
 .ssit{
     display: flex;
