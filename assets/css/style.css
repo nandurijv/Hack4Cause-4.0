@@ -19,7 +19,6 @@ body{
     background-color: black;
 }
 section{
-    min-height: 100vh;
     padding:0;
     margin:0;
 }
@@ -504,7 +503,7 @@ section{
 
 /* contact us styling */
 .contact .wrapper{
-    height:100vh;
+    height:auto;
 }
 .contact .main-heading{
     margin:0;
@@ -537,8 +536,18 @@ section{
 .container a{
     text-decoration: none;
     color:#ffeded;
-    margin:2rem;
+    margin-left:2rem;
+    margin-right:2rem;
 }
+.contact-menu li{
+    margin:0.5rem;
+    list-style-type: none;
+}
+.contact-menu a{
+    text-decoration: none;
+    color:#ffeded;
+}
+
 .footer{
     /* margin-top:2rem; */
     color:#FFEDED;
@@ -548,7 +557,19 @@ section{
     justify-content: center;
     /* margin-top:4rem; */
 }
+.ssit img{
+    margin:2rem;
+}
+.ssit{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    width:300px;
+}
 .footer-text{
     opacity:75%;
     font-size: 12px;
+    margin:2rem;
 }

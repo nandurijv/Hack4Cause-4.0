@@ -183,3 +183,9 @@ li.tlink{
 .logo{
     margin:1rem;
 }
+.navigation-mob{
+    display: block;
+}
+.contact .wrapper{
+    min-height:100vh;
+}
