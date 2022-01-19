@@ -90,7 +90,7 @@ var myfunc = setInterval(function () {
     document.getElementById("days-2").innerHTML = days
     document.getElementById("hours-2").innerHTML = hours
     document.getElementById("minutes-2").innerHTML = minutes
-    document.getElementById("seconds-2").innerHTML = seconds
+    document.getElementById("seconds-2").innerHTML = `<span style="color:#eb1616">${seconds}</span`
 
     // Display the message when countdown is over
     if (timeleft < 0) {

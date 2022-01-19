@@ -127,7 +127,7 @@ section{
     align-items: center;
     justify-content: center;
     height:100vh;
-    left:-36.781rem;
+    left:-38.781rem;
     overflow: hidden;
     z-index: 9;
     transition:0.3s all ease;
@@ -138,7 +138,7 @@ section{
     align-items: center;
     justify-content: center;
     height:100vh;
-    left:-35.781rem;
+    left:-36.781rem;
     overflow: hidden;
     z-index: 9;
     transition:0.3s all ease;
@@ -185,11 +185,10 @@ section{
     align-items: center;
     text-align: center;
     transition:0.3s all ease;
-    
 }
 .circle-fs{
-    height: 56rem;
-    width:56rem;
+    height: 52rem;
+    width:52rem;
     background-color: #ffeded;
     border-radius: 50%;
     display: flex;
@@ -199,16 +198,16 @@ section{
     transition:0.3s all ease;
 }
 .icons-list-fs{
-    margin-left:32rem;
+    margin-left:35rem;
     list-style-type: none;
 }
 
 .circle .icons-list{
-    margin-left:36rem;
+    margin-left:37rem;
     list-style-type: none;
 }
 .icons-list img{
-    height:2.3rem;
+    height:2rem;
 }
 .btn{
     display: flex;
@@ -448,7 +447,6 @@ section{
     padding:2rem;
     max-width:50rem;
     color:#ffeded;
-    
     text-align: justify;
     line-height: 2rem;
     font-family: 'Montserrat';
@@ -463,7 +461,9 @@ section{
 }
 
 .card{
-    background-color:#212121;
+    background-color:#131212;
+    /* border:1px solid #212121; */
+    box-shadow:5px 5px #212121;
     color:rgb(161, 159, 159);
     font-family: 'Montserrat';
     margin:2rem;
@@ -476,11 +476,11 @@ section{
     opacity:0;
     text-align:justify;
     transition:0.3s all ease-in-out;
-
 }
+
 .card:hover{
-    border:1px solid #ffeded;
-    /* box-shadow: 3px 3px 0px 0px rgb(71, 71, 71); */
+    /* border:none; */
+    /* box-shadow: none; */
     opacity:1;
 }
 
@@ -488,6 +488,8 @@ section{
     font-size: 28px;
     text-align: center;
     color:#FFEDED;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* letter-spacing: 0.6rem; */
 }
 .active1{
     position:relative;
@@ -501,6 +503,9 @@ section{
 
 
 /* contact us styling */
+.contact .wrapper{
+    height:100vh;
+}
 .logos{
     display:flex;
     flex-direction: row;
@@ -514,7 +519,8 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content:center ;
-    /* margin-right:2rem; */
+    /* padding:2rem; */
+    /* margin-top:2rem; */
 }
 .container{
     display:flex;
@@ -522,11 +528,12 @@ section{
     align-items: center;
     justify-content: center;
     padding:0;
-    margin-top:4rem;
+    /* margin-top:4rem; */
 }
 .container a{
     text-decoration: none;
     color:#ffeded;
+    margin:2rem;
 }
 .footer{
     /* margin-top:2rem; */
@@ -535,5 +542,5 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top:6rem;
+    /* margin-top:4rem; */
 }
