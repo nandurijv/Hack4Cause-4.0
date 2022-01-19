@@ -127,7 +127,7 @@ section{
     align-items: center;
     justify-content: center;
     height:100vh;
-    left:-35.781rem;
+    left:-34.781rem;
     overflow: hidden;
     z-index: 9;
     transition:0.3s all ease;
@@ -143,41 +143,9 @@ section{
     z-index: 9;
     transition:0.3s all ease;
 }
-.navbar-onclick{
-    position:fixed;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    height:100vh;
-    left:-40.781rem;
-    overflow: hidden;
-    z-index: 9;
-    transition:0.3s all ease;
-}
-.show-all{
-    margin-left:2rem;
-    cursor: pointer;
-    transition:0.3s all ease-in-out;
-    background-color:#ffeded;
-    border-radius: 50%;
-}
-
-.show-all:hover{
-    background-color:rgb(252, 225, 225);
-}
-.show-all-fs{
-    margin-left:6rem;
-    cursor: pointer;
-    transition:0.3s all ease-in-out;
-    background-color:#ffeded;
-    border-radius: 50%;
-}
-.show-all-fs:hover{
-    background-color:rgb(252, 225, 225);
-}
 .circle{
-    height: 40.938rem;
-    width:40.938rem;
+    height: 40rem;
+    width:40rem;
     background-color: #ffeded;
     /* border-radius: 50%; */
     display: flex;
@@ -186,24 +154,9 @@ section{
     text-align: center;
     transition:0.3s all ease;
 }
-.circle-fs{
-    height: 52rem;
-    width:52rem;
-    background-color: #ffeded;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: right;
-    transition:0.3s all ease;
-}
-.icons-list-fs{
-    margin-left:35rem;
-    list-style-type: none;
-}
 
 .circle .icons-list{
-    margin-left:40rem;
+    margin-left:34rem;
     list-style-type: none;
 }
 .icons-list img{

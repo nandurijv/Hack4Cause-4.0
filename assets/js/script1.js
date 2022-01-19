@@ -102,61 +102,6 @@ var myfunc = setInterval(function () {
         document.getElementById("").innerHTML = "TIME UP!!";
     }
 }, 1000);
-// NAV BAR IMPLEMENTATION
-
-let fsbtn = document.getElementById('show-all');
-let q = 0;
-fsbtn.addEventListener('click', function () {
-    if (q == 0) {
-        fsbtn.classList.add('show-all-fs');
-        fsbtn.classList.remove('show-all');
-
-        let circle = document.getElementsByClassName(('circle'))[0];
-        circle.classList.remove('circle');
-        circle.classList.add('circle-fs');
-
-        let navbar = document.getElementsByClassName(('navbar'))[0];
-        circle.classList.add('navbar-fs');
-        circle.classList.remove('navbar');
-
-        let iconlist = document.getElementsByClassName('icons-list')[0];
-        iconlist.classList.remove('icons-list');
-        iconlist.classList.add('icons-list-fs');
-
-        fsbtn.children[0].setAttribute('src', "https://img.icons8.com/ios-filled/50/000000/long-arrow-left.png");
-
-        desc = document.getElementsByClassName('icon-desc');
-        Array.from(desc).forEach(element => {
-            element.style.display = "block";
-        })
-        // document.getElementsByClassName('clos-all')[0].style.display="block";
-        q = 1;
-    }
-    else {
-        fsbtn.classList.remove('show-all-fs');
-        fsbtn.classList.add('show-all');
-        let circle = document.getElementsByClassName(('circle-fs'))[0];
-        circle.classList.add('circle');
-        circle.classList.remove('circle-fs');
-
-        let navbar = document.getElementsByClassName(('navbar-fs'))[0];
-        circle.classList.add('navbar');
-        circle.classList.remove('navbar-fs');
-
-        let iconlist = document.getElementsByClassName('icons-list-fs')[0];
-        iconlist.classList.add('icons-list');
-        iconlist.classList.remove('icons-list-fs');
-
-        fsbtn.children[0].setAttribute('src', "https://img.icons8.com/ios-filled/50/000000/long-arrow-right.png");
-
-        let desc = document.getElementsByClassName('icon-desc');
-        Array.from(desc).forEach(element => {
-            element.style.display = "none";
-        })
-        // document.getElementsByClassName('clos-all')[0].style.display="none";
-        q = 0;
-    }
-});
 
 // for contact icons: hover effect 
 
