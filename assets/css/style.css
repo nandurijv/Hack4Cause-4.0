@@ -374,7 +374,7 @@ section{
     transition:0.3s all ease;
     padding:2rem;
     border-radius:2rem;
-    transform: translateY(150px);
+    transform: translateY(100px);
     opacity:0;
     text-align:justify;
     transition:0.3s all ease-in-out;
@@ -394,11 +394,6 @@ section{
     height:5rem;
 }
 
-.card:hover{
-    /* border:none; */
-    opacity:1;
-}
-
 .card-head{
     font-size: 28px;
     text-align: center;
@@ -406,12 +401,7 @@ section{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     /* letter-spacing: 0.6rem; */
 }
-.active1{
-    position:relative;
-    transform: translateY(0px);
-    opacity:1;
 
-}
 .group1{
     display:flex;
     flex-wrap: wrap;
@@ -431,14 +421,20 @@ section{
     width:40vw;
     align-items: center;
     justify-content: center;
-    background-color:#212121;
-    box-shadow: 5px 5px #2e2b2b;
+    background-color:#ffeded;
+    box-shadow: 10px 10px #eb1616b4;
     margin:2rem;
+    transform: translateY(100px);
+    transition:0.3s all ease-in-out;
+    opacity:0;
+
 }
 .card1-head{
-    color:#ffeded;
+    color:#212121;
+    font-family: 'Poppins';
     text-align: center;
     font-size: 2rem;
+    z-index: 9;
 }
 
 .card1-img{
@@ -448,7 +444,11 @@ section{
 .card1-img img{
     height:100px;
 }
-
+.active1{
+    position:relative;
+    transform: translateY(0px);
+    opacity:1;
+}
 /* sponsors section styling */
 .sponsors .main-heading{
     padding:0;

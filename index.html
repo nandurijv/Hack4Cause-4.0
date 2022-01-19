@@ -215,27 +215,27 @@
                     
                     <div class="card1-container">
                         <div class="card1-head">BLOCKCHAIN</div>
-                        <div class="card1-img"><img src="./assets/images/H4C_light@300x.png"></div>
+                        <div class="card1-img"><img src="./assets/images/H4C_black@300x.png"></div>
                     </div>
                     <div class="card1-container">
                         <div class="card1-head">INTERNET OF THINGS</div>
-                        <div class="card1-img"><img src="./assets/images/H4C_light@300x.png"></div>
+                        <div class="card1-img"><img src="./assets/images/H4C_black@300x.png"></div>
                     </div>
                     <div class="card1-container">
                         <div class="card1-head">CYBER SECURITY</div>
-                        <div class="card1-img"><img src="./assets/images/H4C_light@300x.png"></div>
+                        <div class="card1-img"><img src="./assets/images/H4C_black@300x.png"></div>
                     </div>
                     <div class="card1-container">
                         <div class="card1-head">IMAGE PROCESSING</div>
-                        <div class="card1-img"><img src="./assets/images/H4C_light@300x.png"></div>
+                        <div class="card1-img"><img src="./assets/images/H4C_black@300x.png"></div>
                     </div>
                     <div class="card1-container">
                         <div class="card1-head">SOFTWARE DEVELOPMENT</div>
-                        <div class="card1-img"><img src="./assets/images/H4C_light@300x.png"></div>
+                        <div class="card1-img"><img src="./assets/images/H4C_black@300x.png"></div>
                     </div>
                     <div class="card1-container">
                         <div class="card1-head">ARTIFICIAL INTELLIGENCE</div>
-                        <div class="card1-img"><img src="./assets/images/H4C_light@300x.png"></div>
+                        <div class="card1-img"><img src="./assets/images/H4C_black@300x.png"></div>
                     </div>
 
                 </div>
@@ -490,6 +490,24 @@
         window.addEventListener('scroll', reveal);
         function reveal() {
             var reveals = document.getElementsByClassName('card');
+            Array.from(reveals).forEach(element => {
+                var windowHeight = window.innerHeight;
+                var revealTop = element.getBoundingClientRect().top;
+                var revealPoint = 100;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    element.classList.add('active1');
+                }
+                else {
+                    element.classList.remove('active1');
+                }
+            });
+        }
+    </script>
+    <script>
+         window.addEventListener('scroll', reveal);
+        function reveal() {
+            var reveals = document.getElementsByClassName('card1-container');
             Array.from(reveals).forEach(element => {
                 var windowHeight = window.innerHeight;
                 var revealTop = element.getBoundingClientRect().top;
