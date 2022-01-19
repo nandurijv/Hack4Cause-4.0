@@ -177,6 +177,24 @@ li.tlink{
     flex-direction: column;
     justify-content: space-around;
 }
+/* sponsors section */
+.group{
+    flex-direction: column;
+    margin:0;
+}
+.sponsor-title{
+    border:2px solid #EB1616;
+}
+.sponsor-card{
+    margin-bottom:1rem;
+}
+.sponsor-img img{
+    flex-direction: column;
+    height:50px;
+}
+
+
+
 .con-info{
     flex-direction: column;
 }
@@ -206,3 +224,4 @@ li.tlink{
     text-decoration: none;
     color:#ffeded;
 }
+

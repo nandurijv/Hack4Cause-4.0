@@ -458,7 +458,7 @@ section{
 .sponsors .wrapper{
     background:url('../images/sponsor-bg.png');
     animation: bg 10s linear infinite;
-    height:100vh;
+    height:auto;
 }
 @keyframes bg {
     from {
@@ -467,15 +467,44 @@ section{
     to {
         background-position: 500px 0;
     }
-  }
+}
 
-
-
-
+#sponsor-title{
+    color:#ffeded;
+}
+.sponsor-grp{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.sponsor-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:1rem;
+}
+.sponsor-img{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sponsor-img img{
+    margin:2rem;
+    height:100px;
+}
+.group{
+    margin:2rem;
+    display:flex;
+    align-items: center;
+    justify-items: center;
+}
 /* contact us styling */
 .contact .wrapper{
     height:100vh;
-    justify-content: center;
+    justify-content: space-between;
 }
 .contact .main-heading{
     display:none;
