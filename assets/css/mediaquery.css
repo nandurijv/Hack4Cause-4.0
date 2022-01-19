@@ -226,3 +226,10 @@ li.tlink{
     color:#ffeded;
 }
 
+.faq-label {
+    width:90vw;
+}
+.faq-answer{
+    width:90vw;
+    /* margin:0; */
+}

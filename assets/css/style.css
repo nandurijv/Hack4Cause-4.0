@@ -219,7 +219,6 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    
 }
 section{
     scroll-snap-align: start;
@@ -503,7 +502,7 @@ section{
 }
 /* contact us styling */
 .contact .wrapper{
-    height:100vh;
+    height:auto;
     justify-content: space-between;
 }
 .contact .main-heading{
@@ -577,3 +576,189 @@ section{
     font-size: 12px;
     margin:2rem;
 }
+
+/* FAQ */
+.faq {
+    padding: 20px;
+    width: 60%;
+    min-width:450px;
+    margin: auto;
+    position: relative;
+    height: auto;
+  }
+  
+  
+  .faq-container {
+    /* width: 100%;
+    height: 100%; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  
+  }
+  
+  .faq-label {
+    cursor: pointer;
+    width:50vw;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffededb6;
+    border-radius: 5px;
+    margin:2rem;
+  }
+  
+  .faq-label-text {
+    color:#212121;
+  
+  }
+  
+  .faq-label-icon {
+    padding: 2px 3px;
+    background:#eb161685;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .material-icons {
+    color: white;
+    transition: 0.3s all ease;
+  }
+  .material-icons img{
+      height:30px;
+  }
+  
+  .faq-answer {
+    transition: 0.5s all ease;
+    width:50vw;
+    margin-top: 15px;
+    height: 0;
+    border-radius: 6px;
+    color: rgba(127, 121, 121, 1);
+    overflow: hidden;
+  
+  }
+  
+  .faq-answer-content {
+    padding: 1rem;  
+  }
+  
+  .active {
+  
+    background-color:rgba(58, 57, 57, 0.432);
+    border: 1px solid #242222;
+    color:white;
+    height: auto;
+    margin-bottom: 25px;
+  
+  }
+  .rotate{
+    transform: rotate(180deg)
+  }
+  .global-label{
+    width:100%;
+    height:35px;
+    border-bottom: solid 2px #C4C1C1;
+    margin-bottom: 35px;
+  }
+  .global-label-text{
+    font-size:18px;
+    color:#f6f8f8;
+  }
+  .tracklogo{
+    height: 50px;
+    width: 44px;
+    margin-left: 90%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    grid-row: 4;
+  }
+  .cardi {
+    margin: 20px;
+    padding:  0px;
+    min-width: 550px;
+    min-height: 300px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    transition: all 0.2s;
+    text-align: center;
+    align-items: center;
+  }
+  
+  
+  @-webkit-keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 7));
+              transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 7));
+              transform: translateX(calc(-250px * 7));
+    }
+  }
+  .slider {
+    background: pr;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 60vh;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .slider::before, .slider::after {
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+  .slider::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+  }
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  .slider .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+            animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  .title_tracks{
+    text-align: center;
+    padding: 5px;
+    grid-row: 2;
+    font-weight: 500;
+    font-size: 30px;
+    color: #212121;
+  }
+  #pt{
+    text-align: center;
+    grid-row: 3;
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 15px;
+    
+  }
+  

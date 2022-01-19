@@ -150,3 +150,18 @@ gmail.addEventListener('mouseenter', () => {
 gmail.addEventListener('mouseleave', () => {
     gmail.children[0].setAttribute('src', 'assets/images/Gmail logo.png')
 })
+
+// faq section
+let faqLabel = document.querySelectorAll(".faq-label");
+
+      faqLabel.forEach(item => item.onclick = () => {
+        //selektuje Answer
+        item.nextElementSibling.classList.toggle('active');
+
+
+        let labelIcon = item.lastElementChild;
+        let icons = labelIcon.lastElementChild;
+        icons.classList.toggle('rotate');
+
+
+      })
