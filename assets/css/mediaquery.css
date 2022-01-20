@@ -215,9 +215,12 @@ li.tlink{
 }
 
 
-
+.group3{
+    margin:0;
+}
 .con-info{
     flex-direction: column;
+    font-size:small;
 }
 .logo{
     margin:1rem;
@@ -237,6 +240,7 @@ li.tlink{
 }
 .contact-menu{
     display:block;
+    margin:0;
 }
 .contact-menu li{
     margin:0.5rem;
@@ -245,6 +249,7 @@ li.tlink{
 .contact-menu a{
     text-decoration: none;
     color:#ffeded;
+    font-size: small;
 }
 
 .faq-label {
