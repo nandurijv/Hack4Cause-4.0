@@ -516,7 +516,6 @@ section{
     align-items: center;
     justify-content: space-between;
     font-family: 'Times New Roman', Times, serif';
-    flex-wrap: wrap;
 }
 .logos{
     display:flex;
