@@ -448,6 +448,7 @@ section{
     position:relative;
     transform: translateY(0px);
     opacity:1;
+    margin:0;
 }
 /* sponsors section styling */
 .sponsors .main-heading{
@@ -507,6 +508,7 @@ section{
 .contact .wrapper{
     height:100vh;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .group3{
     /* margin-top:4rem; */
@@ -514,6 +516,7 @@ section{
     align-items: center;
     justify-content: space-between;
     font-family: 'Times New Roman', Times, serif';
+    flex-wrap: wrap;
 }
 .logos{
     display:flex;
