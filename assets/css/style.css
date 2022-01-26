@@ -448,7 +448,7 @@ section{
     position:relative;
     transform: translateY(0px);
     opacity:1;
-    margin:0;
+    margin:2rem;
 }
 /* sponsors section styling */
 .sponsors .main-heading{
