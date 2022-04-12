@@ -27,7 +27,7 @@
 // code inspired from : https://www.educative.io/edpresso/how-to-create-a-countdown-timer-using-javascript
 
 // The data/time we want to countdown to
-var countDownDate = new Date("Mar 5, 2022 9:00:00").getTime();
+var countDownDate = new Date("Mar 5, 2023 9:00:00").getTime();
 
 // Run myfunc every second
 var myfunc = setInterval(function () {
@@ -57,11 +57,11 @@ var myfunc = setInterval(function () {
     // Display the message when countdown is over
     if (timeleft < 0) {
         clearInterval(myfunc);
-        document.getElementsByClassName("days").innerHTML = ""
-        document.getElementById("hours").innerHTML = ""
-        document.getElementById("mins").innerHTML = ""
-        document.getElementById("secs").innerHTML = ""
-        document.getElementById("").innerHTML = "TIME UP!!";
+        document.getElementsByClassName("days").innerHTML = "0"
+        document.getElementById("hours").innerHTML = "0"
+        document.getElementById("mins").innerHTML = "0"
+        document.getElementById("secs").innerHTML = "0"
+//         document.getElementById("").innerHTML = "TIME UP!!";
     }
 }, 1000);
 
